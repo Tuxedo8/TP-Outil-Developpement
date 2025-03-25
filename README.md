@@ -68,3 +68,9 @@ Pour terminer, écrivez un script, strip.sh, qui, pour chaque argument x qui lui
 • sinon :
 ◦ si x est un fichier au format ELF (la commande file peut vous aider), lui applique la commande strip ;
 ◦ sinon, le supprime.
+
+## Script de test
+Pour tester vos script, vous aurez à votre disposition les programmes en C suivant : 
+- *code_faux.c*
+- *ex_tableau_erreur.c*
+- *fibonacci.c*
