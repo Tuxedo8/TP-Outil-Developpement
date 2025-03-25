@@ -47,16 +47,20 @@ demandé) sur la sortie standard.
 Il vous faut maintenant écrire un script nommé valgrind_report.sh qui exécute à l'aide de valgrind le programme dont le nom est
 donné en premier argument en lui fournissant comme arguments tous les arguments restants (après le premier). Ce script devra
 capturer les sorties de valgrind afin de les réafficher sur la sortie d'erreur standard sous la forme simplifiée suivante :
-• les erreurs de lecture devront être indiquées sur une ligne sous la forme :
-Erreur en lecture dans <fonction> (<fichier>:<ligne>)
-• les erreurs d'écriture devront être indiquées sur une ligne sous la forme :
-Erreur en ecriture dans <fonction> (<fichier>:<ligne>)
-• les fuites mémoire devront être comptabilisées en faisant la somme des fuites definitives, indirectes, possibles, ainsi que des
+
+- Les erreurs de lecture devront être indiquées sur une ligne sous la forme :
+``Erreur en lecture dans <fonction> (<fichier>:<ligne>)``
+- Les erreurs d'écriture devront être indiquées sur une ligne sous la forme :
+``Erreur en ecriture dans <fonction> (<fichier>:<ligne>)``
+- Les fuites mémoire devront être comptabilisées en faisant la somme des fuites definitives, indirectes, possibles, ainsi que des
 zones encore atteignables et supprimées. Le total devra être affiché sous la forme :
-Total des fuites : <nombre> octets
+``Total des fuites : <nombre> octets``
+
 A titre d'exemple, l'utilisation de ce script sur ex_tableau_erreur donne la sortie d'erreur :
+``
 Erreur en ecriture dans main (ex_tableau_erreur.c:17)
 Total des fuites : 480 octets
+``
 La localisation utilisée pour chaque erreur correspond à la source de l'erreur (première localisation indiquée par valgrind), pas à la
 localisation de l'allocation correspondante.
 Pour cet exercice, vous pouvez supposer que l'exécutable fourni est compilé avec -g et vous ne devez produire aucun affichage autre
